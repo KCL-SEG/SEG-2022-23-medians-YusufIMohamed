@@ -1,6 +1,16 @@
 """Median calculator."""
-"""ENTER YOUR SOLUTION HERE!"""
-
+def median(numbers):
+    length = len(numbers)
+    print(length)
+    if length%2==0:
+        print("even")
+        #Lists index from 0 so I have to minus 1 
+        median =((numbers[(int(length/2)-1)] + numbers[(int(length/2))])/2)
+        
+    else:#lists of an odd numbered size only have one number that could be the median
+        print("odd")
+        median = numbers[int((length+1)/2)-1]
+    return median
 while True:
     try:
         print("Enter a list of numbers separated by commas: ")
